@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Wendy+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amaranth&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+  <title>Materialize CSS</title>
+  <style>
+    nav .badge{
+      position: relative;
+      top: 20px;
+      right: 20px;
+    }
+    body{
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .background{
+      background: url('images/bg.jpg');
+      background-repeat: no-repeat;
+      width: 100%;
+      background-size: cover;
+      background-position: 50% 50%;
+      position: relative;
+      padding-top:25%;
+      padding-bottom:10%;
+    }
+
+    .text{
+      position: relative;
+      left: 0%;
+      top: 10%;
+      text-align: center;
+    }
+
+    .text h2{
+      font-size: 2vw;
+      font-family: "Wendy One", sans-serif;
+      text-shadow: 2px 2px grey;
+      margin: 0;
+      transition-property: background, padding, margin, border, transform, box-shadow, opacity, color, fill, font, border-radius, max-height, max-width, filter, -webkit-transform, -webkit-box-shadow, -webkit-filter;
+    }
+
+    .text span a{
+      font-size: 0.7vw;
+      font-weight: bold;
+      margin-right: 40px;
+    }
+
+    .fa{
+      font-size: 2vw;
+      color: black;
+      font-weight: lighter;
+    }
+
+
+    .box-animate{    
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,300%);    
+      /*start animation*/
+      animation-name: pippo;
+      animation-duration: 2s ;
+      animation-direction: alternate;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+    }
+
+    h2{
+      font-size: 2vw;
+      font-family: "Wendy One", sans-serif;
+    }
+
+    h5{
+      font-family: "Wendy One", sans-serif;
+    }
+
+    h3{
+      font-family: "Wendy One", sans-serif;
+    }
+
+    h4{
+      font-family: "Wendy One", sans-serif;
+    }
+
+    @keyframes pippo {
+      0% {top: 35%}
+      100% {top: 65%}
+    }
+
+    .bgs{
+      background: url('images/bgs.jpg');
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    /*Progressbar*/
+    .progress-bar {
+      position: relative;
+      width: 500px;
+      height: 3em;
+      background-color: #111;
+      border-radius: 1.5em;
+      color: white;
+    }
+
+    .progress-bar::before {
+      content: attr(data-label);
+      display: flex;
+      align-items: center;
+      position: absolute;
+      left: .5em;
+      top: .5em;
+      bottom: .5em;
+      width: calc(var(--width, 0) * 1%);
+      min-width: 2rem;
+      max-width: calc(100% - 1em);
+      background-color: #069;
+      border-radius: 1em;
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar --> 
+  <nav class="nav-wraper black" style="height: 70px">
+    <div class="container-fluid">
+      <a href="#" class="brand-logo"><img src="images/cropped.png" alt="" style="max-height: 70px; max-width: 100%; height: auto !important"></a>
+      <ul class="right">
+        <a class="waves-effect waves-light btn hide-on-med-and-down" style="border-radius: 5px; margin: 0px; font-size: 13px; font-weight: bold;"><i class="material-icons left" style="font-size: 13px; font-weight: bold;">power_settings_new</i>Connexion</a>
+      </ul>  
+      <a href="#" class="sidenav-trigger" data-target="mobile-links">
+        <i class="material-icons">menu</i>
+      </a>
+      <ul class="magic flow-text hide-on-med-and-down" style="display:flex; flex-flow: row wrap; justify-content:center; text-transform: uppercase; font-weight: bold;">
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Simulateurs</a></li>
+        <li><a href="#">Réduire mes impôts</a></li>
+        <li><a href="#">Parler à un expert</a></li>
+        <li><a href="#">Serveur comparatif</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>  
+      
+    </div>
+  </nav>
+  <div class="background">
+    <div class="text"><h2>DECLARATIONS IMPOTS LUXEMBOURG:</h2>
+      <h2>Votre coach virtuel pour réaliser GRATUITEMENT des économies 
+      </h2>
+      <h2>sur vos impôts Luxembourgeois</h2>
+      <span>
+          <a class="waves-effect waves-light btn">simulateur d'impôt gratuit</a>
+        
+          <a class="waves-effect grey lighten-5 btn" style="color: black">commencer ma déclaration en ligne</a>
+        
+      </span>
+      <div class="box-animate"><a href="#exactline"><i class="fa fa-angle-down" aria-hidden="true"></i></a></div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="container">
+      <div class="col s12 m12 center">
+        <h2><a name="exactline" style="color: black"></a>Comment réaliser ma déclaration d’impôts ? </a></h2>
+      </div>
+      <div class="card">
+        <div class="card-content grey lighten-3">
+          <div class="row">
+            <div class="col s12 m4">
+              <div class="icon-block">
+                <h2 class="center light-blue-text">
+                  <i class="material-icons" style="font-size: 100px; color: lightseagreen">account_circle</i>
+                </h2>
+                <h5 class="center title">Speed up the development</h5>
+                <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+              </div>
+            </div>
+            <div class="col s12 m4">
+              <div class="icon-block">
+                <h2 class="center light-blue-text">
+                  <i class="material-icons" style="font-size: 100px; color: lightseagreen">format_list_bulleted</i>
+                </h2>
+                <h5 class="center title">Speed up the development</h5>
+                <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+              </div>
+            </div>
+            <div class="col s12 m4">
+              <div class="icon-block">
+                <h2 class="center light-blue-text">
+                  <i class="material-icons" style="font-size: 100px; color: lightseagreen">login</i>
+                </h2>
+                <h5 class="center title">Speed up the development</h5>
+                <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section" style="margin-top: 100px">
+        <div class="row">
+          <div class="col s12 m6">
+            <div class="col s6 m6">
+              <div class="row">
+                <img src="images/colibri2.png" alt="" class="responsive-img" style="width: 125px; height: 326px; float: right;">
+              </div>
+              <div class="row" style="clear: right">
+                <img src="images/colibri4.png" alt="" class="responsive-img" style="width: 106px; height: 174px; float: right">
+              </div>
+            </div>
+            <div class="col s6 m6" style="clear: right">
+              <img src="images/colibri1.png" alt="" class="responsive-img" style="width: 317px; height: 290px; transform: translate(0,-10%)">
+              <img src="images/colibri3.png" alt="" class="responsive-img" style="width: 237px; height: 214px; transform: translate(0,-10%)">
+            </div>
+            <div class="col s6 m6"></div>
+            <div class="col s6 m6">
+              <img src="images/colibri5.png" alt="" class="responsive-img" style="width: 287px; height: 103px; transform: translate(0,-10%)">
+            </div>
+          </div>
+          <div class="col s12 m6">
+            <div class="col s12 m12">
+                <h3 class="center">Prenez le contrôle de votre déclaration</h3>
+                <h5>Dites adieux aux formulaires pénibles …</h3>
+                <p class="light">Vous établissez de manière optimale vos démarches fiscales sans la moindre connaissance.</p>
+                <p class="light">Si vous êtes expérimentés, tant mieux, l’outil vous accompagnera dans l’ensemble de vos démarches.</p>
+                <p class="light">Laissez-vous guider en répondant à des questions simples et pratiques, pour une déclaration sans prise de tête …</p>
+                <div style="text-align: center">
+                  <a class="waves-effect waves-light btn">C'est parti</a>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section" style="background: rgba(172, 192, 192, 0.2);">
+      <div class="container">
+        <div class="col s12 m12 center">
+          <h2>Nos services ...</h2>
+        </div>
+        <div class="row">
+          <div class="col s12 m6">
+            <div class="card">
+              <div class="card-content">
+                <div class="icon-block">
+                  <h2 class="center light-blue-text">
+                    <i class="material-icons" style="font-size: 50px; color: lightseagreen">calculate</i>
+                  </h2>
+                  <h4 class="center title" style="text-decoration: underline">CALCULATRICE FISCALE</h4>
+                  <p class="light center">Simulez en quelques clics le montant de votre imposition et calculez en temps réel l‘économie potentielle réalisable.</p>
+                  <div style="text-align: center; margin-top: 20px">
+                    <a class="waves-effect waves-light btn">En savoir plus</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6">
+            <div class="card">
+              <div class="card-content">
+                <div class="icon-block">
+                  <h2 class="center light-blue-text">
+                    <i class="material-icons" style="font-size: 50px; color: lightseagreen">summarize</i>
+                  </h2>
+                  <h4 class="center title" style="text-decoration: underline">DÉCLARATION</h4>
+                  <p class="light center">A partir d’un questionnaire simplifié, notre algorithme vous accompagne GRATUITEMENT dans le remplissage de votre déclaration.</p>
+                  <div style="text-align: center; margin-top: 20px">
+                    <a class="waves-effect waves-light btn">En savoir plus</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m6">
+            <div class="card">
+              <div class="card-content">
+                <div class="icon-block">
+                  <h2 class="center light-blue-text">
+                    <i class="material-icons" style="font-size: 50px; color: lightseagreen">euro_symbol</i>
+                  </h2>
+                  <h4 class="center title" style="text-decoration: underline">Réduire mes impôts</h4>
+                  <p class="light center">Notre outil est en mesure de vous calculer le montant des déductions possibles afin de réaliser un maximum d’économie fiscale.</p>
+                  <div style="text-align: center; margin-top: 20px">
+                    <a class="waves-effect waves-light btn">En savoir plus</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6">
+            <div class="card">
+              <div class="card-content">
+                <div class="icon-block">
+                  <h2 class="center light-blue-text">
+                    <i class="material-icons" style="font-size: 50px; color: lightseagreen">call</i>
+                  </h2>
+                  <h4 class="center title" style="text-decoration: underline">PARLER A UN EXPERT</h4>
+                  <p class="light center">Vous avez une question ou tout simplement besoin d’aide ? Nous vous proposons une mise en relation rapide et gratuite avec un expert spécialisé en fiscalité.</p>
+                  <div style="text-align: center; margin-top: 20px">
+                    <a class="waves-effect waves-light btn">En savoir plus</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m6">
+            <div class="card">
+              <div class="card-content">
+                <div class="icon-block">
+                  <h2 class="center light-blue-text">
+                    <i class="material-icons" style="font-size: 50px; color: lightseagreen">app_registration</i>
+                  </h2>
+                  <h4 class="center title" style="text-decoration: underline">DÉCOMPTE ANNUEL</h4>
+                  <p class="light center">Je souhaite générer mon décompte annuel</p>
+                  <div style="text-align: center; margin-top: 20px">
+                    <a class="waves-effect waves-light btn">En savoir plus</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6">
+            <div class="card">
+              <div class="card-content">
+                <div class="icon-block">
+                  <h2 class="center light-blue-text">
+                    <i class="material-icons" style="font-size: 50px; color: lightseagreen">house</i>
+                  </h2>
+                  <h4 class="center title" style="text-decoration: underline">CALCUL DE MA RETRAITE</h4>
+                  <p class="light center">Je souhaite calculer ma retraite au Luxembourg</p>
+                  <div style="text-align: center; margin-top: 20px">
+                    <a class="waves-effect waves-light btn">En savoir plus</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="col s12 m12 center">
+        <h2>Nos atouts ...</h2>
+      </div>
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text">
+              <i class="material-icons" style="font-size: 50px; color: black">euro</i>
+            </h2>
+            <h5 class="center title" style="color: lightseagreen">ECONOMIE FISCALE</h5>
+            <p class="light center">Notre outil diagnostique en temps réel le montant de vos impôts et de l’économie fiscale possible.</p>
+          </div>
+          <div class="icon-block">
+            <h2 class="center light-blue-text">
+              <i class="material-icons" style="font-size: 50px; color: black">people</i>
+            </h2>
+            <h5 class="center title" style="color: lightseagreen">ACCOMPAGNEMENT</h5>
+            <p class="light center">Pas besoin de connaissances fiscales, vous êtes accompagnés de A à Z. Sur la base de questions simples, notre algorithme vous guidera.</p>
+          </div>
+          <div class="icon-block">
+            <h2 class="center light-blue-text">
+              <i class="material-icons" style="font-size: 50px; color: black">settings_input_component</i>
+            </h2>
+            <h5 class="center title" style="color: lightseagreen">SOLUTIONS INNOVANTES</h5>
+            <p class="light center">Vous bénéficiez grâce à la technologie digitale d’une optimisation fiscale adaptée à votre situation.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4" style="background: url('images/cropped-bg.png'); width: 321.17px; height: 691px;"></div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text">
+              <i class="material-icons" style="font-size: 50px; color: black">more_time</i>
+            </h2>
+            <h5 class="center title" style="color: lightseagreen">RAPIDE ET EFFICACE</h5>
+            <p class="light center">Vous économisez du temps et de l’argent. Notre service est GRATUIT. Votre déclaration est prête en quelques clics.</p>
+          </div>
+          <div class="icon-block">
+            <h2 class="center light-blue-text">
+              <i class="material-icons" style="font-size: 50px; color: black">rotate_right</i>
+            </h2>
+            <h5 class="center title" style="color: lightseagreen">CONSEILS SUR-MESURE</h5>
+            <p class="light center">Un expert vous proposera une analyse  GRATUITE de votre situation afin de vous aider à optimiser votre déclaration et ainsi diminuer stratégiquement vos impôts.</p>
+          </div>
+          <div class="icon-block">
+            <h2 class="center light-blue-text">
+              <i class="material-icons" style="font-size: 50px; color: black">play_circle</i>
+            </h2>
+            <h5 class="center title" style="color: lightseagreen">SIMULEZ EN TEMPS REEL</h5>
+            <p class="light center">L’accès à nos simulateurs vous permets de calculer directement le montant de vos économies d’impôts.</p>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <section class="grey lighten-3">
+    <div class="col s12 m12 center">
+      <h2>Quelques chiffres ...</h2>
+    </div>
+    <div class="row">
+      <div class="col s12 m4 center">
+        <h5 style="font-family: Amaranth; text-decoration: underline">Simulations réalisées</p> 
+          
+        <!--Progressbar-->  
+        <!-- <div class="progress-bar" style="--width: 10" data-label="Loading..."></div> -->
+        <label for="">Progress</label>
+        <div class="progress multi blue lighten-4">
+          <div class="determinate amber" style="width: 50%; animation: grow 2s;">50%</div>
+          <div class="determinate blue" style="width: 50%; animation: grow 2s;">50%</div>
+        </div>
+        <label for="">Progress</label>
+
+
+      </div>
+      <div class="col s12 m4 center">
+        <h5 style="font-family: Amaranth; text-decoration: underline">Déclarations réalisées</p>
+        <label for="">Progress</label>
+        <div class="progress multi blue lighten-4">
+          <div class="determinate amber" style="width: 50%; animation: grow 2s;">50%</div>
+          <div class="determinate blue" style="width: 50%; animation: grow 2s;">50%</div>
+        </div>
+        <label for="">Progress</label>
+      </div>
+      <div class="col s12 m4 center">
+        <h5 style="font-family: Amaranth; text-decoration: underline">Economie moyenne(en €)</p>
+        <label for="">Progress</label>
+        <div class="progress multi blue lighten-4">
+          <div class="determinate amber" style="width: 50%; animation: grow 2s;">50%</div>
+          <div class="determinate blue" style="width: 50%; animation: grow 2s;">50%</div>
+        </div>
+        <label for="">Progress</label>
+      </div>
+    </div>
+    <br>
+    <br>
+  </section>
+  
+  <div class="card" style="margin-top: 0">
+    <div class="card-content" style="margin-top: 0">
+      <div class="col s12 m12 center">
+        <h2>A propos</h2>
+      </div>
+      <p class="light center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="col s12 m12 center">
+      <h2>Restez informé des dernières actualités fiscales…</h2>
+    </div>
+    <div class="row">
+      <div class="col s12 m4">
+        <div class="card" style="padding: 20px">
+          <div class="card-image">
+            <img src="images/bareme.jpg" alt="">
+          </div>
+          <div class="card-content" style="margin: 0">
+            <h5 style="font-size: 1vw; margin: 0">Barème d'impôt Luxembourg</h5>
+            <p>Lorem ipsum dolor sit amet, at mei dolore tritani repudiandae. In his nemore temporibus consequuntur, vim ad prima vivendum consetetur. Viderer feugiat at pro, mea aperiam</p>
+          </div>
+          <div style="text-align: right;">
+            <a href="#">Lire plus</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m4">
+        <div class="card" style="padding: 20px">
+          <div class="card-image">
+            <img src="images/declaration.jpg" alt="">
+          </div>
+          <div class="card-content" style="margin: 0">
+            <h5 style="font-size: 1vw; margin: 0">Déclaration d'impôt frontalier</h5>
+            <p>Lorem ipsum dolor sit amet, at mei dolore tritani repudiandae. In his nemore temporibus consequuntur, vim ad prima vivendum consetetur. Viderer feugiat at pro, mea aperiam</p>
+          </div>
+          <div style="text-align: right;">
+            <a href="#">Lire plus</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m4">
+        <div class="card" style="padding: 20px">
+          <div class="card-image">
+            <img src="images/assurance.jpg" alt="">
+          </div>
+          <div class="card-content" style="margin: 0">
+            <h5 style="font-size: 1vw; margin: 0">Assurance vie et solde restant dû</h5>
+            <p>Lorem ipsum dolor sit amet, at mei dolore tritani repudiandae. In his nemore temporibus consequuntur, vim ad prima vivendum consetetur. Viderer feugiat at pro, mea aperiam</p>
+          </div>
+          <div style="text-align: right;">
+            <a href="#">Lire plus</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="bgs">
+      <div class="text-bgs">
+        <h2 style="color: white; text-align: center;">Réalisez des économies d’impôts dès maintenant !<a class="waves-effect waves-light btn" style="margin-left: 60px">Commencer</a></h2>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="page-footer black">
+    <div class="container">
+      <div class="row">              
+              
+        <div id="categories" class="col l3 offset-l1 s12 m8">
+          <h5 class="white-text" style="text-align: underline;">Services</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Ma déclaration</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Réduire mes impôts</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Contacter un expert</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Nos simulateurs</a></li>
+          </ul>
+        </div><!--col-->
+              
+                            
+        <div class="col l4 s12 m8">
+          <h5 class="white-text" style="text-align: underline;">A Propos</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Foire aux questions</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">RGPD</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Mentions Légales</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Cookies</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Conditions d’utilisation</a></li>
+          </ul>
+        </div><!--col-->  
+        
+        <div class="col l2 s12 m8">
+          <br>
+          <a href="#"><i style="font-size: 38px;" class="fab fa-facebook-square"></i></a> &nbsp;&nbsp;&nbsp;
+          <a href="#"><i style="font-size: 38px;" class="fab fa-linkedin"></i></a>&nbsp;&nbsp;&nbsp;
+          <a href="#"><i style="font-size: 38px;" class="fab fa-instagram"></i></a>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">info@declalux.com</a></li>
+          </ul>
+        </div><!--col-->  
+        
+      </div><!--row-->
+    </div><!--container-->
+    
+    <div class="footer-copyright">
+      <div class="container center">
+       <p>Copyright © 2021 Sumo Stephane.</p>
+       <br>
+      </div>
+    </div>
+  </footer>
+  <!-- <ul class="sidenav" id="mobile-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+
+  <div class="parallax-container">
+    <div class="parallax"><img src="images/bg.jpg"></div>
+  </div>
+  <div class="section white">
+    <div class="row container">
+      <h2 class="header">Parallax</h2>
+      <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+    </div>
+  </div>
+  <div class="parallax-container">
+    <div class="parallax"><img src="images/bg.jpg"></div>
+  </div> -->
+ 
+  <script>
+    const progressBar = document.getElementsByClassName('progress-bar')[0]
+    setInterval(() => {
+      const computedStyle = getComputedStyle(progressBar)
+      const width = parseFloat(computedStyle.getPropertyValue('--width')) || 0
+      progressBar.style.setProperty('--width', width + .1)
+    }, 5)
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.sidenav').sidenav();
+    })
+  </script>
+</body>
+</html>
